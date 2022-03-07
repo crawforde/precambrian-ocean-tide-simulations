@@ -1,0 +1,9 @@
+*.env
+!sample.env
+*.nc
+*.mat
+*.png
+*.svg
+*.jpg
+*.bmp
+*.DS_Store
