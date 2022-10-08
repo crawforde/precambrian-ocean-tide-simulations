@@ -17,10 +17,10 @@ classdef Bathymetry
         NC_VAR_NAME_LON = 'LONGITUDE_E'
         NC_VAR_NAME_LAT = 'LATITUDE_N'
         NC_VAR_NAME_DEPTH = 'TOPO'
-        PLOT_CAXIS = [0 5000]
-        PLOT_CTICK = (0:1000:5000)
+        PLOT_CAXIS = [0 4285]
+        PLOT_CTICK = (0:1000:4000)
         PLOT_XTICK = [0 60 120 180 240 300]
-        PLOT_YTICK = [-80 -60 -40 -20 0 20 40 60 80]
+        PLOT_YTICK = [-82 -60 -40 -20 0 20 40 60 82]
     end
     properties
         FilePath      % PATH TO ASSOCIATED BATHYMETRY FILES
@@ -68,6 +68,7 @@ classdef Bathymetry
             set(gca, 'layer', 'top')
             axis([xmin xmax ymin ymax]);
             caxis(Bathymetry.PLOT_CAXIS);
+            set(gca, 'TickLength', [0 0]);
             plot = plot1;
         end
     end

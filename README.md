@@ -1,7 +1,7 @@
 # Mid-Archean Tide Simulation Plotting Scripts
 
 ## Requirements
-- Matlab Version: 2018a
+- Matlab Version: 2018b
 - Data from this data [repository](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/A32CT4) (see section below for more details).
 
 ## Download dataset

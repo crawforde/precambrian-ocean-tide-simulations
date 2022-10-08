@@ -18,12 +18,13 @@ clearvars;
 PlotTools.set_global_defaults();
 
 % SAVE COLORBAR AS ITS OWN IMAGE
+set(0, 'DefaultFigureVisible', 'off');
 fig = PlotTools.create_default_figure('Figure 2 - Colorbar', [100 600 600 800]);
 PlotTools.create_standalone_colorbar(Bathymetry.PLOT_CAXIS, Bathymetry.PLOT_CTICK);
 PlotTools.save_image(fig, '/bathymetry/bathymetry_colorbar');
 
 % MAKE IMAGE OF EACH BATHYMETRY
-bathymetries = Bathymetry.list_all();
+bathymetries = [Bathymetry.list_all()];
 for plot_index = 1:1:length(bathymetries)
     bathymetry = bathymetries(plot_index);
     fig = PlotTools.create_default_figure(['Bathymetry ' bathymetry.Number ': ' bathymetry.Name]);
